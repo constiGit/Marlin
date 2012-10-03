@@ -1,3 +1,6 @@
+I added some Files, that the firmware works on the GSG Reprap Mainboard as well.
+
+
 WARNING: 
 --------
 THIS IS RELEASE CANDIDATE 2 FOR MARLIN 1.0.0
