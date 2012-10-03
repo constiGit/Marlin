@@ -1,0 +1,16 @@
+##############################################################
+
+gsg.name=GSG Mainboard
+gsg.upload.protocol=stk500
+gsg.upload.maximum_size=63488
+gsg.upload.speed=38400
+gsg.bootloader.low_fuses=0xFF
+gsg.bootloader.high_fuses=0xDC
+gsg.bootloader.extended_fuses=0xFD
+gsg.bootloader.path=atmega644
+gsg.bootloader.file=ATmegaBOOT_644.hex
+gsg.bootloader.unlock_bits=0x3F
+gsg.bootloader.lock_bits=0x0F
+gsg.build.mcu=atmega644
+gsg.build.f_cpu=16000000L
+gsg.build.core=arduino

@@ -657,6 +657,76 @@
 
 #endif
 
+/*********************************************************
+ *          GSG Reprap Mainboard
+ ********************************************************/
+#if MOTHERBOARD == 37
+    #undef MOTHERBOARD
+    #define MOTHERBOARD 6
+    #define KNOWN_BOARD 1
+    #ifndef __AVR_ATmega644__
+        #error Oops!  Make sure you have 'GSG Mainboard' selected from the 'Tools -> Boards' menu.
+    #endif
+
+    #define X_STEP_PIN              21
+    #define X_DIR_PIN               20
+    #if X_HOME_DIR < 0
+        #define X_MIN_PIN           7
+        #define X_MAX_PIN           -1
+    #else
+        #define X_MIN_PIN           -1
+        #define X_MAX_PIN           7
+    #endif
+
+    #define Y_STEP_PIN              23
+    #define Y_DIR_PIN               22
+    #if Y_HOME_DIR < 0
+        #define Y_MIN_PIN           5
+        #define Y_MAX_PIN           -1
+    #else   
+        #define Y_MIN_PIN           -1
+        #define Y_MAX_PIN           5
+    #endif
+
+    #define Z_STEP_PIN              26
+    #define Z_DIR_PIN               25
+    #if Z_HOME_DIR < 0
+        #define Z_MIN_PIN           12
+        #define Z_MAX_PIN           -1
+    #else
+        #define Z_MIN_PIN           -1
+        #define Z_MAX_PIN           12
+    #endif
+
+    #define E0_STEP_PIN             28
+    #define E0_DIR_PIN              27
+
+    #define LED_PIN                 -1
+
+    #define FAN_PIN                 19
+
+    #define PS_ON_PIN               -1
+    #define KILL_PIN                -1
+
+    #define HEATER_0_PIN            0 // (extruder)
+    #define HEATER_1_PIN            -1
+    #define HEATER_2_PIN            -1
+
+    #define HEATER_BED_PIN          1  // (bed)
+    #define X_ENABLE_PIN            24
+    #define Y_ENABLE_PIN            24
+    #define Z_ENABLE_PIN            24
+    #define E0_ENABLE_PIN           24
+
+    #define TEMP_0_PIN              2   // MUST USE ANALOG INPUT NUMBERING NOT DIGITAL OUTPUT NUMBERING!!!!!!!!! (pin 33 extruder)
+    #define TEMP_1_PIN              -1
+    #define TEMP_2_PIN              -1
+    #define TEMP_BED_PIN            1   // MUST USE ANALOG INPUT NUMBERING NOT DIGITAL OUTPUT NUMBERING!!!!!!!!! (pin 34 bed)
+    #define SDPOWER                 -1
+    #define SDSS                    -1
+
+#endif
+
 
 #if MOTHERBOARD == 7
 #define KNOWN_BOARD
